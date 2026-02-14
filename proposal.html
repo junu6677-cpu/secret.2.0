@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌙 Junaid to Zunera - Eternal Love Story 🌙</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cinzel:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(180deg, #0a0a23 0%, #1a1a3a 40%, #2a2a5a 70%, #3a1a5a 100%);
+            color: #f8f8ff; overflow-x: hidden; line-height: 1.9; position: relative;
+        }
+
+        /* ROMANTIC STARRY SKY */
+        .romantic-sky {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -3;
+            background: 
+                radial-gradient(6px 6px at 30px 40px, #fff, transparent),
+                radial-gradient(4px 4px at 90px 80px, #f8f8ff, transparent),
+                radial-gradient(3px 3px at 160px 30px, #e0e8ff, transparent),
+                radial-gradient(5px 5px at 240px 110px, #d0d8ff, transparent);
+            animation: starsRomance 120s linear infinite, starsTwinkle 25s ease-in-out infinite;
+        }
+        @keyframes starsRomance { 0% { background-position: 0 0; } 100% { background-position: 180px 360px; } }
+        @keyframes starsTwinkle { 0%, 100% { opacity: 0.8; } 50% { opacity: 1; } }
+
+        /* FLOATING HEARTS */
+        .heart-particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .heart-particle { position: absolute; animation: heartRise 40s linear infinite; font-size: 12px; }
+        @keyframes heartRise { 0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(-250px) scale(1.5) rotate(360deg); opacity: 0; } }
+
+        /* PAGE FLIP ANIMATIONS */
+        .page-flip-container { perspective: 2500px; position: relative; padding: 2rem 0; }
+        .page { 
+            padding: 14rem 6rem; text-align: center; background: linear-gradient(145deg, rgba(25,25,60,0.92), rgba(15,15,45,0.88)); 
+            margin: 6rem auto; max-width: 1400px; border-radius: 70px; backdrop-filter: blur(35px); 
+            border: 3px solid rgba(240,248,255,0.25); box-shadow: 0 80px 250px rgba(0,0,0,0.95), inset 0 0 120px rgba(255,255,255,0.1);
+            transform-style: preserve-3d; opacity: 0; transform: rotateY(-25deg) translateY(120px) scale(0.95);
+            transition: all 1.8s cubic-bezier(0.23, 1, 0.320, 1); position: relative; overflow: hidden;
+        }
+        .page.visible { opacity: 1; transform: rotateY(0deg) translateY(0) scale(1); }
+        .page::before {
+            content: ''; position: absolute; top: -90%; left: -90%; width: 280%; height: 280%;
+            background: radial-gradient(circle at 30% 40%, rgba(255,182,193,0.15) 0%, transparent 70%);
+            animation: loveSwirl 60s linear infinite;
+        }
+        @keyframes loveSwirl { 0% { transform: rotate(0deg) scale(1); } 100% { transform: rotate(360deg) scale(1.1); } }
+
+        /* PAGE HEADERS */
+        .page-title { 
+            font-family: 'Cinzel', serif; font-size: clamp(5rem, 9vw, 8rem); margin-bottom: 8rem; 
+            background: linear-gradient(135deg, #f0f8ff, #ffb6c1, #ffd700, #f8f8ff); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+            text-shadow: 0 0 100px rgba(255,182,193,0.9); animation: titleLoveFloat 10s ease-in-out infinite;
+        }
+        @keyframes titleLoveFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-35px) scale(1.02); } }
+
+        /* HERO PAGE */
+        .hero-page { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0; margin: 0; background: radial-gradient(ellipse at center, rgba(255,182,193,0.2) 0%, transparent 70%); border-radius: 0; box-shadow: none; }
+        .names { 
+            font-family: 'Cinzel', serif; font-size: clamp(8rem, 20vw, 18rem); font-weight: 700; 
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffb6c1 30%, #ffd1dc 60%, #f8f8ff 100%); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+            text-shadow: 0 0 120px rgba(255,182,193,1); animation: loveShimmer 8s ease-in-out infinite;
+        }
+        @keyframes loveShimmer { 0%, 100% { filter: drop-shadow(0 0 60px rgba(255,182,193,0.9)); } 50% { filter: drop-shadow(0 0 120px rgba(255,182,193,1)); } }
+
+        /* POETRY CARDS */
+        .poetry-card {
+            font-size: 1.9rem; font-style: italic; margin: 6rem 0; padding: 5rem 7rem; 
+            background: linear-gradient(135deg, rgba(255,248,255,0.2), rgba(255,182,193,0.15)); 
+            backdrop-filter: blur(30px); border-radius: 50px; border: 3px solid rgba(255,182,193,0.4); 
+            display: inline-block; box-shadow: 0 60px 200px rgba(0,0,0,0.85), inset 0 0 60px rgba(255,255,255,0.12);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: poetryReveal 3.5s ease-out forwards;
+            opacity: 0; transform: translateY(150px) scale(0.9);
+        }
+        .poetry-card:nth-child(even) { animation: poetrySlideLeft 3.5s ease-out forwards; transform: translateX(150px) scale(0.9); }
+        .poetry-card:hover { transform: translateY(-40px) scale(1.06) !important; box-shadow: 0 100px 300px rgba(255,182,193,0.5); border-color: rgba(255,182,193,0.9); }
+        @keyframes poetryReveal { to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes poetrySlideLeft { to { opacity: 1; transform: translateX(0) scale(1); } }
+
+        /* GLOWING LETTER EMOJI */
+        .secret-letter-emoji {
+            position: fixed; bottom: 30px; right: 30px; z-index: 9999; cursor: pointer;
+            font-size: 4.5rem; animation: letterGlow 3s ease-in-out infinite alternate;
+            text-shadow: 0 0 20px #ff69b4, 0 0 40px #ffb6c1, 0 0 60px rgba(255,182,193,0.8);
+            transition: all 0.4s; background: rgba(255,255,255,0.15); backdrop-filter: blur(25px);
+            border-radius: 50%; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center;
+            border: 4px solid rgba(255,182,193,0.7); box-shadow: 0 25px 100px rgba(255,182,193,0.6);
+        }
+        .secret-letter-emoji:hover {
+            transform: scale(1.35) rotate(360deg); text-shadow: 0 0 50px #ff69b4, 0 0 100px #ffb6c1;
+            box-shadow: 0 40px 150px rgba(255,182,193,0.9); border-color: #ffb6c1;
+        }
+        @keyframes letterGlow {
+            0% { filter: drop-shadow(0 0 25px rgba(255,182,193,0.8)); transform: scale(1); }
+            100% { filter: drop-shadow(0 0 50px rgba(255,182,193,1)); transform: scale(1.15); }
+        }
+
+        /* LOVE LETTER POPUP */
+        .love-letter-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10001; background: rgba(10,10,35,0.98); backdrop-filter: blur(60px); display: none; justify-content: center; align-items: center; padding: 3rem; }
+        .love-letter-popup.show { display: flex; }
+        .letter-container { background: linear-gradient(145deg, rgba(255,248,255,0.2), rgba(255,182,193,0.15)); backdrop-filter: blur(60px); border-radius: 80px; padding: 7rem 6rem; max-width: 1100px; max-height: 95vh; overflow-y: auto; border: 6px solid rgba(255,182,193,0.6); box-shadow: 0 180px 500px rgba(0,0,0,1), inset 0 1px 0 rgba(255,255,255,0.4), 0 0 0 12px rgba(255,182,193,0.4); animation: letterHeaven 2.5s cubic-bezier(0.25,0.46,0.45,0.94); position: relative; }
+        @keyframes letterHeaven { 0% { opacity: 0; transform: scale(0.4) translateY(-120px) rotateX(70deg); } 100% { opacity: 1; transform: scale(1) translateY(0) rotateX(0deg); } }
+        .letter-heart-big { position: absolute; top: -180px; left: 50%; transform: translateX(-50%); font-size: 14rem; background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 200px rgba(255,182,193,1); animation: megaHeartBeat 2.2s ease-in-out infinite; z-index: 5; }
+        @keyframes megaHeartBeat { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.45); } }
+        .handwritten-love { font-family: 'Dancing Script', cursive; font-size: 2.2rem; line-height: 1.8; color: #fdf6f0; background: rgba(0,0,0,0.65); padding: 5rem 5rem; border-radius: 50px; margin: 5rem 0; border-right: 8px solid #ffb6c1; border-left: 8px solid #ff69b4; box-shadow: inset 0 0 80px rgba(0,0,0,0.9), 0 0 100px rgba(255,182,193,0.5); font-weight: 400; background-image: linear-gradient(rgba(255,255,255,0.03) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.04) 2px, transparent 2px); background-size: 100% 28px, 28px 100%; }
+        .handwritten-line { opacity: 0; transform: translateX(-40px); display: block; margin-bottom: 1.8rem; position: relative; overflow: hidden; }
+        .handwritten-line.animate { animation: loveWriting 1.2s ease-out forwards; }
+        .handwritten-line::after { content: ''; position: absolute; top: 0; right: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: loveShine 2s infinite; }
+        @keyframes loveWriting { to { opacity: 1; transform: translateX(0); } }
+        @keyframes loveShine { 0% { right: -100%; } 100% { right: 100%; } }
+
+        footer { background: linear-gradient(180deg, rgba(15,15,50,0.98), rgba(25,25,70,0.95)); padding: 12rem 7rem; text-align: center; font-size: 1.8rem; border-radius: 70px 70px 0 0; margin-top: 10rem; box-shadow: 0 -100px 400px rgba(0,0,0,1); border-top: 6px solid rgba(255,182,193,0.6); position: relative; }
+        .footer-heart { position: absolute; top: -50px; right: 60px; font-size: 6rem; animation: heartFloatFooter 12s ease-in-out infinite; }
+
+        @media (max-width: 768px) { .page { padding: 10rem 3rem; margin: 3rem 1.5rem; } .handwritten-love { font-size: 1.8rem; padding: 4rem; } .secret-letter-emoji { font-size: 3.8rem; width: 110px; height: 110px; bottom: 25px; right: 25px; } }
+    </style>
+</head>
+<body>
+    <div class="romantic-sky"></div>
+    <div class="heart-particles" id="heartParticles"></div>
+
+    <!-- GLOWING LETTER EMOJI (BOTTOM RIGHT) -->
+    <div class="secret-letter-emoji" onclick="openLoveLetterDirect()" title="Secret Love Letter for Zunera 💌">
+        💌
+    </div>
+
+    <!-- PAGE 1: HERO -->
+    <div class="page-flip-container">
+        <section class="page hero-page visible">
+            <h1 class="names">Zunera ♥ Junaid</h1>
+            <div style="font-size: clamp(1.8rem, 5.5vw, 3.2rem); max-width: 1200px; padding: 7rem; background: linear-gradient(135deg, rgba(255,182,193,0.2), rgba(255,248,255,0.25)); backdrop-filter: blur(40px); border-radius: 60px; border: 4px solid rgba(255,182,193,0.5); margin: 5rem 0; line-height: 1.9; box-shadow: 0 80px 250px rgba(255,182,193,0.4);">
+                <strong>My dearest Zunera,</strong><br><br>
+                You are the poetry of my soul, the melody of my heart. From the moment our eyes met, I knew Allah wrote us into each other's destiny. Your presence turns my ordinary world into magic.
+            </div>
+        </section>
+
+        <!-- PAGE 2: ZUNERA'S LAUGH -->
+        <section class="page">
+            <h2 class="page-title">Your Laugh</h2>
+            <div class="poetry-card">
+                <em>"Your laugh, Zunera, is sunlight breaking through<br>
+                A symphony of joy that makes my heart anew<br>
+                Like silver bells in springtime breeze it rings<br>
+                Each giggle paints my world with golden wings<br>
+                One smile from you and shadows disappear<br>
+                Your laughter, love, is music to my ear."</em>
+            </div>
+            <div class="poetry-card">
+                <em>"When you laugh, the stars themselves align<br>
+                Time pauses just to hear that sound divine<br>
+                Roses bloom where your happiness does fall<br>
+                Zunera's laugh - the sweetest song of all<br>
+                In every chuckle, my forever I find<br>
+                Your joyful voice - heaven intertwined."</em>
+            </div>
+        </section>
+
+        <!-- PAGE 3: ZUNERA'S BEAUTY -->
+        <section class="page">
+            <h2 class="page-title">Your Beauty</h2>
+            <div class="poetry-card">
+                <em>"Zunera, your beauty defies the poet's art<br>
+                A masterpiece carved by a divine heart<br>
+                Eyes like midnight holding galaxies within<br>
+                Smile that could make the sun begin again<br>
+                Grace that flows like rivers to the sea<br>
+                Perfection found in you, my destiny."</em>
+            </div>
+            <div class="poetry-card">
+                <em>"At twenty, your beauty blooms like rose in May<br>
+                Fresher than dawn, more lovely than the day<br>
+                Each feature whispers Allah's perfect design<br>
+                Your loveliness, Zunera, utterly divine<br>
+                No painter's brush could capture such sweet grace<br>
+                Your beauty lights my everlasting space."</em>
+            </div>
+        </section>
+
+        <!-- PAGE 4: MY PROMISES -->
+        <section class="page">
+            <h2 class="page-title">My Promises</h2>
+            <div class="poetry-card">Every morning I'll wake to see your smile, make you feel like the queen of my world 👑</div>
+            <div class="poetry-card">Your dreams become mine, your happiness my mission, always by your side ✨</div>
+            <div class="poetry-card">Through every season of life, my love grows deeper, stronger, forever true 💍</div>
+            <div class="poetry-card">You're my best friend, my heartbeat, my everything - chosen by fate itself 💖</div>
+        </section>
+
+        <!-- PAGE 5: OUR FUTURE -->
+        <section class="page">
+            <h2 class="page-title">Forever Together</h2>
+            <div class="poetry-card">Lazy mornings wrapped in each other's arms, coffee kisses, endless dreams ☕💕</div>
+            <div class="poetry-card">Adventures hand in hand, exploring the world, building memories that never fade 🌍✨</div>
+            <div class="poetry-card">Growing old gracefully, laughing at our wrinkles, loving deeper with every year 👴👵</div>
+            <div class="poetry-card">You and me against the world, forever my love, forever my home 🏡💖</div>
+        </section>
+    </div>
+
+    <!-- LOVE LETTER POPUP -->
+    <div class="love-letter-popup" id="loveLetter">
+        <div class="letter-container">
+            <button class="close-letter" onclick="closeLetter()" style="position: absolute; top: 30px; right: 40px; background: rgba(255,255,255,0.3); border: 4px solid rgba(255,255,255,0.6); font-size: 2.8rem; color: #fff; cursor: pointer; width: 80px; height: 80px; border-radius: 50%; backdrop-filter: blur(25px); transition: all 0.6s; font-weight: bold;">×</button>
+            <div class="letter-heart-big">💖</div>
+            <h3 style="font-family: 'Cinzel', serif; font-size: 3.5rem; margin: 3rem 0 4rem 0; background: linear-gradient(135deg, #ffb6c1, #fff, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 50px rgba(255,182,193,1);">Zunera - My Secret Love Letter</h3>
+            <div class="handwritten-love" id="handwrittenLetter">
+                <span class="handwritten-line" data-line="0">Zunera thume meri duniya mera dil meri jaan mera jannah.</span>
+                <span class="handwritten-line" data-line="1">Thumare se sach bolunga zunera aap jitna haseen ladki ye duniya me koi nhi</span>
+                <span class="handwritten-line" data-line="2">you are the perfection aapki shakal khoobsurat aur aapki hasi</span>
+                <span class="handwritten-line" data-line="3">usse khoobsurat cheez mai dekhko nhi 20 saal ki umar me.</span>
+                <span class="handwritten-line" data-line="4">Zunera mera saath raho ye duniya me aur jannah me bhi</span>
+                <span class="handwritten-line" data-line="5">YOU ARE THE MOST PRECIOUS GIFT AND YOU THE BLESSING OF MY LIFE</span>
+                <span class="handwritten-line" data-line="6">I LOVE YOU SOO MUCH</span>
+                <span class="handwritten-line" data-line="7">SHAADI KARLO MERE SE</span>
+                <span class="handwritten-line" data-line="8">WITH LOVE</span>
+                <span class="handwritten-line" data-line="9">YOUR HUSBAND</span>
+                <span class="handwritten-line" data-line="10">MOHAMMED JUNAID</span>
+                <span class="handwritten-line" data-line="11">KARLO BABY BRIYANI KHALTUN 💕</span>
+            </div>
+            <div style="margin-top: 5rem; font-size: 2.2rem; color: #ffb6c1; font-family: 'Great Vibes', cursive; text-align: center; text-shadow: 0 0 30px rgba(255,182,193,0.8);">Forever yours, Mohammed Junaid 💖</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-heart">💖</div>
+        <p style="font-size: 2rem; font-family: 'Great Vibes', cursive;">Made with eternal love for my Zunera ♡<br>Your laugh is my forever melody</p>
+    </footer>
+
+    <script>
+        // Heart Particles
+        function createHeartParticles() {
+            const container = document.getElementById('heartParticles');
+            for(let i = 0; i < 100; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart-particle';
+                heart.innerHTML = ['💖','💕','💗','✨','🌸'][Math.floor(Math.random()*5)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.fontSize = (Math.random() * 16 + 10) + 'px';
+                heart.style.animationDuration = (Math.random() * 50 + 40) + 's';
+                heart.style.animationDelay = Math.random() * 40 + 's';
+                container.appendChild(heart);
+            }
+        }
+        createHeartParticles();
+        setInterval(() => { document.getElementById('heartParticles').innerHTML = ''; createHeartParticles(); }, 35000);
+
+        // Smooth Page Scroll Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.page').forEach(page => observer.observe(page));
+
+        // Letter Functions
+        function openLoveLetterDirect() {
+            document.getElementById('loveLetter').classList.add('show');
+            loveLetterAnimation();
+            heartExplosion();
+        }
+        function closeLetter() {
+            document.getElementById('loveLetter').classList.remove('show');
+        }
+
+        function loveLetterAnimation() {
+            const lines = document.querySelectorAll('.handwritten-line');
+            lines.forEach((line, index) => {
+                setTimeout(() => line.classList.add('animate'), index * 600);
+            });
+        }
+
+        function heartExplosion() {
+            for(let i = 0; i < 250; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = ['💖','💕','✨','🌸','💝','🌟'][Math.floor(Math.random()*6)];
+                    heart.style.cssText = `position:fixed;left:${Math.random()*100}vw;top:${Math.random()*50+20}vh;font-size:${Math.random()*60+30}px;pointer-events:none;animation:heartBurst 4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;z-index:10002;`;
+                    document.body.appendChild(heart);
+                    setTimeout(() => heart.remove(), 4000);
+                }, i * 15);
+            }
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes heartBurst { 0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; } 100% { transform: translateY(-150vh) scale(2) rotate(1080deg); opacity: 0; } }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
